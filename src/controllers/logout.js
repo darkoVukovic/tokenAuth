@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {useNavigate } from 'react-router-dom';
-import { ReadCookie } from './myFunctions';
 import { CheckToken } from './myFunctions';
 
 // deletes httponly cookie+username and token in mysql  then redirect to login/register page
@@ -45,7 +44,7 @@ function Logout() {
         },
     }).then(response => response.json())
     .then(data => {
-        if(data.result == "true") {
+        if(data.result === true) {
             setLoggedIn(true);
             navigate('/')
 

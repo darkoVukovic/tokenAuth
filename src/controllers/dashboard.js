@@ -6,7 +6,7 @@ function Dashboard() {
 
   const navigation = [
     {name: "home", path:'/'},
-    {name: "dashboard", path:'/'},
+    {name: "dashboard", path:'/dashboard'},
     {name: "logout", path: "/logout"}
   ]
     return (

@@ -7,7 +7,7 @@ import homepage from './controllers/homepage'
 import Test from './controllers/test'
 import Middleware from './controllers/Middleware';
 
-// TODO API MESSAGE text  to numbers and middleware. middleware almost there dont want to retype it on every route but for thats how it is 
+// TODO API MESSAGE text  to numbers and middleware. middleware almost there dont want to retype it on every route but for thats how it is
 function App() {
   return (
     <Router>
