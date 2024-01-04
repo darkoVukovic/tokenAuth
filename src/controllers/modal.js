@@ -1,8 +1,5 @@
 import Auth from './auth';
-import React, { useState, useEffect } from 'react';
-import { checkToken } from './myFunctions';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
+import React, { useState } from 'react';
 
 function Modal() {
   const [showRegister, setRegister] = useState(false);
@@ -26,7 +23,6 @@ function Modal() {
   
   return (
     <div className="auth">
-
       <div className="modal">
       <button className="googleLogin" onClick={googleLogin}>Google login</button>
         <button className="registerBtn" onClick={registerBtn} >Register</button>

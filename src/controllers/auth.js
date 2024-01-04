@@ -1,9 +1,10 @@
 import Register from './register';
 import Login from './login';
+
+
 function auth({auth}) {
 
     function form(method) {
-    
         if(method == "register") {
             return < Register />
         }
@@ -12,7 +13,6 @@ function auth({auth}) {
         }
         
     }
-    
     return (
         <div className={auth.method}>
             <p>{auth.method}</p>

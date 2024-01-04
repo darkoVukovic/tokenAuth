@@ -51,10 +51,20 @@ header {
   height: 40px;
   width: 250px;
 }
-
-
 .dashboard {
+  display: flex;
+}
+
+aside {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   width: 300px;
   height: calc(100vh - 100px);
   border: 1px solid #ccc;
+}
+
+aside li {
+  list-style-type: none;
+  padding: 15px 0;
 }

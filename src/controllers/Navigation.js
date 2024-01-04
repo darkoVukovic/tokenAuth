@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 
 function Navigation(props) {
 
-    return (
-        <li><a href={props.path}>{props.name}</a></li>
-      );
+  return (
+    <ul>
+      {props.links.map((item, index) => (
+        <li key={index}>
+          <Link to={item.path}>{item.name}</Link>
+        </li>
+      ))}
+    </ul>
+  );
+
 
 }
     

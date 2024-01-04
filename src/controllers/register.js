@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
+// TODO maybe add email verification and make username unique with email
 function Register() {
-    
 
         const [formData, setFormData] = useState({
             username: '',

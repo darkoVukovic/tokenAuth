@@ -20,6 +20,7 @@ function Logout() {
             setLoggedIn(true)
         } else {
             setLoggedIn(false);
+            alert("NOT AUTHORIZED")
             navigate('/');  
         }
     })

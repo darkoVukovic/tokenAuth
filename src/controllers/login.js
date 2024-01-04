@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
-import { checkToken } from './myFunctions';
+import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
@@ -17,7 +16,7 @@ const handleInputs = (e) => {
     const {name, value} = e.target;
     setFormData({...formData, [name]: value});
 }
-// send post data to go api  and get token in response 
+
 const handleLogin = (e) => {
     e.preventDefault();
     const apiUrl = "http://localhost:10000/login";
@@ -31,7 +30,7 @@ const handleLogin = (e) => {
         body: JSON.stringify(formData),
     }).then(response => response.json())
     .then(data => {
-        if(data.result == "true") {
+        if(data.result ===  true) {
             document.cookie = `username=${encodeURIComponent(formData.username)}; max-age=3600;`
             setFormData({
                 username: '',
@@ -52,13 +51,11 @@ const handleLogin = (e) => {
     const navigate = useNavigate();
     useEffect(() => {
         if (isLoggedIn) {
-            navigate('/dashboard');
+            navigate('/');
         }
     })
-
     return (
         <div className="l">
-          
             <form action="" method="POST" autoComplete="off">
                 <input value={formData.username} type="text" name="username" placeholder="username" onChange={handleInputs} />
                 <input value={formData.password} type="password" name="password" placeholder="password" onChange={handleInputs}/>
@@ -68,9 +65,6 @@ const handleLogin = (e) => {
       );
 
 }
-
-
-
 
 
 export default Login;

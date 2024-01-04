@@ -1,1 +1,1 @@
-auth with react/go
+auth with react and go
